@@ -22,9 +22,7 @@ export default function DocumentWorkspace() {
     <div className="document-workspace-root">
       <h2>Document Workspace</h2>
 
-      
-
-      <DocumentViewer fileUrl={fileUrl} />
+      <DocumentViewer file={fileUrl} />
     </div>
   );
 }
