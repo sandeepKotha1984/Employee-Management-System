@@ -3,7 +3,7 @@ import DocumentViewer from './DocumentViewer';
 import './DocumentWorkspace.css';
 
 export default function DocumentWorkspace() {
-  const [fileUrl, setFileUrl] = useState<string | null>('documents/sample.pdf');
+    const [fileUrl, setFileUrl] = useState<string | null>('/documents/sample.pdf');
 
   useEffect(() => {
     return () => {
