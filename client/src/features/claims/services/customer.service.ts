@@ -1,5 +1,12 @@
 import { Customer } from "../types/customer.types";
 
+const apiBaseUrl = (import.meta.env.VITE_API_BASE_URL ?? "").replace(/\/$/, "");
+
+const getApiUrl = (path: string) => {
+  const normalized = path.startsWith("/") ? path : `/${path}`;
+  return apiBaseUrl ? `${apiBaseUrl}${normalized}` : normalized;
+};
+
 export type CustomerQuery = {
   startRow: number;
   endRow: number;
@@ -28,7 +35,7 @@ export const getClaims = async ({
     sortOrder,
   });
 
-  const response = await fetch(`/api/claims?${params}`);
+  const response = await fetch(`${getApiUrl("/api/claims")}?${params}`);
 
   if (!response.ok) {
     throw new Error("Failed to fetch claims");
@@ -40,7 +47,7 @@ export const getClaims = async ({
 export const getCustomers = getClaims;
 
 export const deleteCustomer = async (id: number): Promise<void> => {
-  const response = await fetch(`/api/claims/${id}`, {
+  const response = await fetch(getApiUrl(`/api/claims/${id}`), {
     method: "DELETE",
   });
 
@@ -53,7 +60,7 @@ export const updateCustomer = async (
   id: number,
   customer: Partial<Customer>
 ): Promise<Customer> => {
-  const response = await fetch(`/api/claims/${id}`, {
+  const response = await fetch(getApiUrl(`/api/claims/${id}`), {
     method: "PUT",
     headers: {
       "Content-Type": "application/json",
