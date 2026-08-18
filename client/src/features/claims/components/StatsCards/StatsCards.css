@@ -1,0 +1,152 @@
+.stats {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  height: 119px;
+  background: var(--white);
+  border-radius: 30px;
+  box-shadow: var(--shadow);
+  padding: 20px 32px;
+  box-sizing: border-box;
+  animation: fadeUp 0.45s ease both;
+}
+
+.stats__card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex: 1;
+  min-width: 0;
+  height: 100%;
+}
+
+.stats__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
+}
+.stats__icon-wrap {
+  position: relative;
+  width: 58px;
+  height: 58px;
+  flex-shrink: 0;
+  overflow: clip;
+}
+
+.stats__icon-bg {
+  width: 58px;
+  height: 58px;
+}
+
+.stats__icon {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 28px;
+  height: 28px;
+}
+
+.stats__icon--tick {
+  width: 26px;
+  height: 26px;
+}
+
+.stats__label {
+  font-size: 12px;
+  color: var(--text-gray);
+  letter-spacing: -0.12px;
+  margin-bottom: 4px;
+}
+
+.stats__value {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--text-stat);
+  letter-spacing: -0.24px;
+  line-height: 1;
+  margin-bottom: 5px;
+}
+
+.stats__trend {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  font-size: 12px;
+  color: var(--text-dark);
+  letter-spacing: -0.12px;
+}
+
+.stats__trend img {
+  width: 20px;
+  height: 20px;
+  overflow: clip;
+}
+
+.stats__arrow-down {
+  transform: rotate(180deg);
+}
+
+.stats__trend--up {
+  color: var(--trend-up);
+  font-weight: 700;
+}
+
+.stats__trend--down {
+  color: var(--trend-down);
+  font-weight: 700;
+}
+
+.stats__divider {
+  width: 1px;
+  height: 87px;
+  background: #f0f0f0;
+  flex-shrink: 0;
+}
+
+.stats__avatars {
+  display: flex;
+  align-items: center;
+  margin-top: 4px;
+}
+
+.stats__avatar {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: 1.5px solid var(--white);
+  object-fit: cover;
+  overflow: clip;
+  margin-left: -8px;
+}
+
+.stats__avatar:first-child {
+  margin-left: 0;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 1100px) {
+  .stats {
+    flex-wrap: wrap;
+    padding: 24px;
+  }
+
+  .stats__divider {
+    display: none;
+  }
+
+  .stats__card {
+    flex: 1 1 220px;
+  }
+}

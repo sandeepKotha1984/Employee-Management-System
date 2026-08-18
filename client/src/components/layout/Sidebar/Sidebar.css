@@ -1,0 +1,265 @@
+.sidebar {
+  width: var(--sidebar-width);
+  max-width: var(--sidebar-width);
+  min-height: 100vh;
+  background: var(--white);
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  padding: 36px 28px 40px;
+  flex-shrink: 0;
+  position: sticky;
+  top: 0;
+  align-self: flex-start;
+}
+
+.sidebar__brand {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 66px;
+}
+
+.sidebar__user-block {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+
+.sidebar__user-icon-wrap {
+  width: 38px;
+  height: 38px;
+  border-radius: 12px;
+  background: rgba(89, 50, 234, 0.08);
+  border: 1px solid rgba(89, 50, 234, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.sidebar__user-icon {
+  width: 22px;
+  height: 22px;
+  display: block;
+  filter: brightness(0) saturate(100%) invert(30%) sepia(27%) saturate(2000%) hue-rotate(226deg) brightness(88%) contrast(100%);
+}
+
+.sidebar__logout-btn {
+  border: none;
+  background: transparent;
+  color: var(--primary);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  cursor: pointer;
+  padding: 6px 8px;
+  border-radius: 8px;
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.sidebar__logout-btn:hover {
+  background: rgba(89, 50, 234, 0.08);
+  transform: translateY(-1px);
+}
+
+.sidebar__version {
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--text-version);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  align-self: flex-end;
+  margin-bottom: 2px;
+}
+
+.sidebar__nav {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  flex: 1;
+}
+
+.sidebar__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 46px;
+  padding: 0 11px;
+  border: none;
+  border-radius: 8px;
+  background: transparent;
+  color: var(--text-muted);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  transition: background 0.2s ease, color 0.2s ease, transform 0.15s ease;
+}
+
+.sidebar__item:hover:not(.sidebar__item--active) {
+  background: rgba(89, 50, 234, 0.06);
+  transform: translateX(2px);
+}
+
+.sidebar__item--active {
+  background: var(--primary);
+  color: var(--white);
+}
+
+.sidebar__item-main {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex: 1;
+}
+
+.sidebar__icon-wrap {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: clip;
+  flex-shrink: 0;
+}
+
+.sidebar__icon {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.sidebar__icon--active {
+  filter: brightness(0) invert(1);
+}
+
+.sidebar__label {
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: -0.14px;
+}
+
+.sidebar__chevron {
+  width: 16px;
+  height: 16px;
+  overflow: clip;
+  flex-shrink: 0;
+}
+
+.sidebar__pro {
+  margin-top: auto;
+  background: var(--pro-gradient);
+  border-radius: 20px;
+  padding: 26px 24px 20px;
+  text-align: center;
+  margin-bottom: 46px;
+}
+
+.sidebar__pro-text {
+  color: var(--white);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.14px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.sidebar__pro-cta {
+  width: 100%;
+  height: 40px;
+  border-radius: 20px;
+  background: var(--white);
+  color: var(--primary-text);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.14px;
+  box-shadow: 2px 4px 4px 0 rgba(79, 42, 234, 0.17);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.sidebar__pro-cta:hover {
+  transform: translateY(-1px);
+  box-shadow: 2px 6px 10px 0 rgba(79, 42, 234, 0.25);
+}
+
+.sidebar__profile {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.sidebar__avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  object-fit: cover;
+  overflow: clip;
+  flex-shrink: 0;
+}
+
+.sidebar__profile-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.sidebar__profile-name {
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.14px;
+  color: var(--text);
+}
+
+.sidebar__profile-role {
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.12px;
+  color: var(--text-secondary);
+}
+
+.sidebar__profile-chevron {
+  width: 24px;
+  height: 24px;
+  overflow: clip;
+  flex-shrink: 0;
+}
+
+@media (max-width: 1100px) {
+  .sidebar {
+    width: 250px;
+    padding: 28px 18px 32px;
+  }
+
+  .sidebar__title {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 900px) {
+  .sidebar {
+    width: 100%;
+    min-height: auto;
+    position: relative;
+    padding-bottom: 24px;
+  }
+
+  .sidebar__nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .sidebar__item {
+    width: auto;
+    flex: 1 1 140px;
+  }
+
+  .sidebar__pro {
+    margin: 24px 0;
+  }
+}

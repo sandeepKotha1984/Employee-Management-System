@@ -4,20 +4,16 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
-    "dev:server": "npm --prefix server run dev",
-    "dev:client": "npm --prefix client run dev",
-    "build": "tsc -b client/tsconfig.json && vite --config client/vite.config.ts build",
-    "lint": "oxlint client/src",
-    "preview": "vite --config client/vite.config.ts preview"
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "lint": "oxlint src",
+    "preview": "vite preview"
   },
   "dependencies": {
-    "@tanstack/react-query": "^5.101.4",
     "ag-grid-community": "^36.1.0",
     "ag-grid-react": "^36.1.0",
     "axios": "^1.19.0",
-    "react": "^19.2.8",
-    "react-dom": "^19.2.8",
+    
     "react-pdf": "^10.4.1",
     "react-router-dom": "^7.18.2"
   },
@@ -26,7 +22,6 @@
     "@types/react": "^19.2.17",
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^6.0.4",
-    "concurrently": "^10.0.5",
     "oxlint": "^1.75.0",
     "typescript": "~6.0.2",
     "vite": "^8.2.0"

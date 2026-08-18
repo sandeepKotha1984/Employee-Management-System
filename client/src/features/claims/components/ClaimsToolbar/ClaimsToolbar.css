@@ -1,0 +1,75 @@
+
+.claims__tools {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.claims__search {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 216px;
+  height: 38px;
+  background: var(--search-bg);
+  border-radius: 10px;
+  padding: 0 10px;
+}
+
+.claims__search img {
+  width: 24px;
+  height: 24px;
+  overflow: clip;
+  flex-shrink: 0;
+}
+
+.claims__search input {
+  border: none;
+  outline: none;
+  background: transparent;
+  width: 100%;
+  font-size: 12px;
+  color: var(--text-dark);
+  letter-spacing: -0.12px;
+}
+
+.claims__search input::placeholder {
+  color: var(--text-subtle);
+}
+
+.claims__sort {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  width: 154px;
+  height: 38px;
+  background: var(--search-bg);
+  border-radius: 10px;
+  padding: 0 12px;
+  font-size: 12px;
+  color: var(--text-sort);
+  letter-spacing: -0.12px;
+}
+
+.claims__sort strong {
+  font-weight: 600;
+  color: var(--text-sort-bold);
+}
+
+.claims__sort img {
+  width: 18px;
+  height: 18px;
+  overflow: clip;
+  flex-shrink: 0;
+}
+
+.claims__sort select {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: pointer;
+  width: 100%;
+}

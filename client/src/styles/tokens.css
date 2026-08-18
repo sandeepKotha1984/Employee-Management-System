@@ -1,0 +1,41 @@
+:root {
+  --bg: #fafbff;
+  --white: #ffffff;
+  --primary: #5932ea;
+  --primary-text: #4925e9;
+  --text: #000000;
+  --text-dark: #292d32;
+  --text-muted: #9197b3;
+  --text-gray: #acacac;
+  --text-secondary: #757575;
+  --text-subtle: #b5b7c0;
+  --text-sort: #7e7e7e;
+  --text-sort-bold: #3d3c42;
+  --text-version: #838383;
+  --text-stat: #333333;
+  --text-page: #404b52;
+  --border-page: #eeeeee;
+  --page-bg: #f5f5f5;
+  --search-bg: #f9fbff;
+  --active-bg: rgba(22, 192, 152, 0.38);
+  --active-border: #00b087;
+  --active-text: #008767;
+  --active-label: #16c098;
+  --inactive-bg: #ffc5c5;
+  --inactive-border: #df0404;
+  --inactive-text: #df0404;
+  --trend-up: #00ac4f;
+  --trend-down: #d0004b;
+  --shadow: 0px 10px 60px 0px rgba(226, 236, 249, 0.5);
+  --pro-gradient: linear-gradient(118.31deg, #eaabf0 7.37%, #4623e9 95.19%);
+  --sidebar-width: 306px;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.4;
+  font-weight: 400;
+  color: var(--text);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+

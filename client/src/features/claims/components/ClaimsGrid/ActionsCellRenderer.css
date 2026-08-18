@@ -1,0 +1,38 @@
+.actions-cell{
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+}
+.action-btn{
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid transparent;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background-color 0.12s ease, transform 0.12s ease;
+}
+.action-btn:active{ transform: translateY(1px); }
+.edit-btn{
+  background: #eef6ff;
+  color: #0366d6;
+  border-color: rgba(3,102,214,0.12);
+}
+.edit-btn:hover{
+  background: #e2f0ff;
+}
+.delete-btn{
+  background: #fff5f5;
+  color: #c42b2b;
+  border-color: rgba(196,43,43,0.12);
+}
+.delete-btn:hover{
+  background: #ffecec;
+}
+
+.action-btn svg{
+  width: 16px;
+  height: 16px;
+  display: block;
+}
+

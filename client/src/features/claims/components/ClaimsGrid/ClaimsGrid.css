@@ -1,0 +1,111 @@
+.customers__table-wrap {
+  overflow-x: auto;
+}
+
+.customers__table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 860px;
+}
+
+.customers__table th {
+  text-align: left;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-subtle);
+  letter-spacing: -0.14px;
+  padding: 0 8px 20px 0;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.customers__table td {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-dark);
+  letter-spacing: -0.14px;
+  padding: 18px 8px 18px 0;
+  border-bottom: 1px solid #eeeeee;
+  white-space: nowrap;
+}
+
+.customers__status-col {
+  text-align: center;
+  width: 100px;
+  padding-right: 0 !important;
+}
+
+.customers__badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 80px;
+  height: 29px;
+  padding: 0 12px;
+  border-radius: 4px;
+  border: 1px solid;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: -0.14px;
+  line-height: 1;
+}
+
+.customers__badge--active {
+  background: var(--active-bg);
+  border-color: var(--active-border);
+  color: var(--active-text);
+}
+
+.customers__badge--inactive {
+  background: var(--inactive-bg);
+  border-color: var(--inactive-border);
+  color: var(--inactive-text);
+}
+
+.customers__badge--pending {
+  background: rgba(255, 176, 0, 0.12);
+  border-color: rgba(255, 176, 0, 0.45);
+  color: #b7791f;
+}
+
+.customers__empty {
+  text-align: center;
+  color: var(--text-subtle) !important;
+  padding: 40px 0 !important;
+}
+
+.customer-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.customer-action-button {
+  width: 32px;
+  height: 32px;
+  border: 1px solid #e4e7ec;
+  border-radius: 8px;
+  background: #fff;
+  color: #475467;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.customer-action-button:hover {
+  background: #f5f7ff;
+  border-color: #d5e1ff;
+  color: #2146b5;
+}
+
+.customer-action-button--danger:hover {
+  background: #fff1f3;
+  border-color: #feced6;
+  color: #c62828;
+}
+
+.customer-action-button svg {
+  width: 16px;
+  height: 16px;
+}

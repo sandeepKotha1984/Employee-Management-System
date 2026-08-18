@@ -1,0 +1,4 @@
+.document-workspace-root{ display:flex; flex-direction:column; gap:12px }
+.doc-controls{ display:flex; gap:12px; align-items:center }
+.file-label input{ display:none }
+.file-label{ cursor:pointer; padding:8px 12px; background:#eef6ff; color:#0366d6; border-radius:8px }
